@@ -3,6 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:tik_tok/pages/home.dart';
+import 'package:tik_tok/pages/inbox.dart';
+import 'package:tik_tok/pages/plus.dart';
+import 'package:tik_tok/pages/profile.dart';
+import 'package:tik_tok/pages/search.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -20,11 +25,11 @@ class _HomePageState extends State<HomePage> {
   }
 
   final List<Widget> pages = [
-    Center(child: Text('HOME')),
-    Center(child: Text('SEARCH')),
-    Center(child: Text('PLUS')),
-    Center(child: Text('INBOX')),
-    Center(child: Text('PROFILE')),
+    UserHomePage(),
+    UserSearchPage(),
+    UserPlusPage(),
+    UserInboxPage(),
+    UserProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {
